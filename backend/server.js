@@ -21,7 +21,7 @@ app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb+srv://sam:sam@workout.gwijt.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
     // listen for requests
     app.listen(process.env.PORT, () => {
